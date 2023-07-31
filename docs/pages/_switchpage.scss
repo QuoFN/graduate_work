@@ -1,0 +1,35 @@
+.switch-page {
+    padding-top: 190px;
+    padding-bottom: 214px;
+}
+
+.switch-page__title {
+    font-size: 55px;
+    letter-spacing: 1.1px;
+    margin-bottom: 26px;
+}
+
+.switch-page__elements {
+    display: flex;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.34px;
+}
+
+.switch-page__main {
+    margin-right: 35px;
+}
+
+.switch-page__store {
+    position: relative;
+    color: #909090;
+
+    &::after {
+        content: '—';
+        position: absolute;
+        top: 0;
+        left: -32%;
+        color: #000;
+    }
+}

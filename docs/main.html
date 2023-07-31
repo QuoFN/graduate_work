@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womazing</title>
+    <link rel="shortcut icon" href="../image/shop.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="../js/main.js" defer></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="#" class="burger">
+            <span></span>
+        </a>
+        <div class="menu">
+            <div class="container">
+                <div class="menu__inner">
+                    <a href="main.html" class="menu__logo">
+                        <img class="menu__logo-img" src="../image/header/logo.png" alt="Лого">
+                        <span class="menu__logo-title">Womazing</span>
+                    </a>
+                    <nav class="menu__nav">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="main.html">Главная</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./pages/store.html">Магазин</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./pages/brand.html">О бренде</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./pages/contact.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu__num">
+                        <button class="menu__number-link">
+                            <div class="menu__number-img">
+                                <svg width="20" height="20" viewBox="0 0 17 17" fill="white"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_45447_237)">
+                                        <path
+                                            d="M2.25241 4.81643C0.750584 6.31823 0.750584 8.7618 2.25238 10.2636L3.05007 9.46592C1.98816 8.40402 1.98814 6.67613 3.0501 5.61417C4.11203 4.55224 5.83992 4.55224 6.90185 5.61414L7.69953 4.81646C6.19776 3.31463 3.75418 3.31466 2.25241 4.81643Z"
+                                            fill="#6E9C9F" />
+                                        <path
+                                            d="M3.84127 6.39119C3.2091 7.02336 3.20907 8.05201 3.84124 8.68421L4.63895 7.88653C4.54578 7.79335 4.49446 7.66947 4.49446 7.53772C4.49446 7.40599 4.54581 7.2821 4.63898 7.18893C4.73215 7.09576 4.85603 7.04444 4.98776 7.04444C5.11952 7.04444 5.24343 7.09576 5.33658 7.18893L6.13426 6.39122C5.50209 5.75902 4.47344 5.75902 3.84127 6.39119Z"
+                                            fill="#6E9C9F" />
+                                        <path
+                                            d="M13.7483 4.43513L11.8551 2.54848L7.92337 6.47367L9.44758 8.04781C9.19214 8.50125 8.6379 9.3699 7.69334 10.3145C6.74865 11.2592 5.87366 11.8197 5.41587 12.0792L3.87261 10.5556L0.0022583 14.4029L1.8851 16.2983C2.60485 17.0181 3.69998 17.2046 4.6102 16.7625C5.99921 16.0879 8.09546 14.8431 10.1943 12.7443C12.2931 10.6455 13.5379 8.54924 14.2125 7.16023C14.3723 6.83109 14.45 6.47787 14.45 6.12692C14.45 5.5072 14.2078 4.89464 13.7483 4.43513ZM13.1977 6.66732C12.5609 7.97846 11.3845 9.95865 9.39661 11.9466C7.40868 13.9345 5.42849 15.1109 4.11735 15.7477C3.63935 15.9799 3.06287 15.8806 2.6842 15.5019L1.59746 14.4079L3.87543 12.1436L5.19015 13.4415L5.5419 13.2849C5.59905 13.2595 6.95947 12.6438 8.49116 11.1121C10.0239 9.57947 10.6267 8.23054 10.6515 8.17386L10.8041 7.82683L9.50677 6.48705L11.8559 4.14178L12.9512 5.23327C13.3307 5.6133 13.4298 6.18952 13.1977 6.66732Z"
+                                            fill="#6E9C9F" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_45447_237">
+                                            <rect width="17" height="17" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <span class="menu__number">+7 (495) 823-54-12</span>
+                        </button>
+                        <a href="#" class="menu__basket">
+                            <img src="../image/header/basket.png" alt="корзина товаров">
+                        </a>
+                        <div class="modal">
+                            <div class="modal__window">
+                                <button class="modal__close-btn">X</button>
+                                <form action="main.html" class="modal__form">
+                                    <h4 class="modal__form-title">
+                                        Заказать обратный звонок
+                                    </h4>
+                                    <div class="modal__form-input-wrapper">
+                                        <input class="modal__form-input" type="text" required placeholder="Имя"
+                                            maxlength="12" minlength="5">
+                                        <div class="form__line"></div>
+                                        <input class="modal__form-input" type="email" required placeholder="E-mail">
+                                        <div class="form__line"></div>
+                                        <input class="modal__form-input" type="number" size="12" required
+                                            placeholder="Телефон">
+                                        <div class="form__line"></div>
+                                    </div>
+                                    <button type="submit" class="modal__form-button button">
+                                        <span>Заказать звонок</span>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="modal__window-after">
+                                <h4 class="modal__window-after-title">
+                                    Отлично! Мы скоро вам перезвоним.
+                                </h4>
+                                <button type="button" class="modal__window-after-button">
+                                    <span>Закрыть</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <div class="header__title-wrapper">
+                            <div class="header__title">
+                                Новые поступления
+                                в этом сезоне
+                            </div>
+                            <div class="header__subtitle">
+                                Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне.
+                                Время
+                                исследовать.
+                            </div>
+                        </div>
+                        <div class="header__button-box">
+                            <a href="#store" class="header__button-arrow">
+                                <svg width="67" height="68" viewBox="0 0 67 68" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Frame 9">
+                                        <rect width="67" height="67" transform="translate(0 0.5)" fill="#6E9C9F"
+                                            fill-opacity="0.1" />
+                                        <path id="Vector 1" d="M33 20V48M33 48L26 40.8108M33 48L40 40.8108"
+                                            stroke="#6E9C9F" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="./pages/store.html" class="header__button button">
+                                Открыть магазин
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__row">
+                        <div class="header__row-background">
+                            <img class="header__row-img" src="../image/header/photo-center.png" alt="clothes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="collection" id="store">
+                <div class="container">
+                    <h2 class="collection__title title">
+                        Новая коллекция
+                    </h2>
+                    <div class="collection__box-content">
+                        <div class="collection__content">
+                            <img class="collection__image" src="../image/main/USA.png" alt="">
+                            <a href="#" class="collection__image-overlay">
+                                <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 12H31M31 12L20.186 1M31 12L20.186 23" stroke="white" />
+                                </svg>
+                            </a>
+                            <p class="collection__content-text">Футболка USA</p>
+                            <span class="collection__sum">$129</span>
+                        </div>
+                        <div class="collection__content">
+                            <img class="collection__image" src="../image/main/glow.png" alt="">
+                            <a href="#" class="collection__image-overlay">
+                                <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 12H31M31 12L20.186 1M31 12L20.186 23" stroke="white" />
+                                </svg>
+                            </a>
+                            <p class="collection__content-text">Купальник Glow</p>
+                            <span class="collection__sum">$129</span>
+                        </div>
+                        <div class="collection__content">
+                            <img class="collection__image" src="../image/main/sweetshot.png" alt="">
+                            <a href="#" class="collection__image-overlay">
+                                <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 12H31M31 12L20.186 1M31 12L20.186 23" stroke="white" />
+                                </svg>
+                            </a>
+                            <p class="collection__content-text">Свитшот Sweet Shot</p>
+                            <span class="collection__sum">$129</span>
+                        </div>
+                    </div>
+                    <div class="collection__box-button">
+                        <a href="./pages/store.html" class="collection__button">
+                            Открыть магазин
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="important">
+                <div class="container">
+                    <div class="important__inner">
+                        <h2 class="important__title title">
+                            Что для нас важно
+                        </h2>
+                        <div class="important__box-content">
+                            <div class="important__content">
+                                <img class="important__img" src="../image/main/important-1.svg" alt="">
+                                <h4 class="important__subtitle">Качество</h4>
+                                <p class="important__text">Наши профессионалы работают на лучшем оборудовании для
+                                    пошива
+                                    одежды беспрецедентного качества</p>
+                            </div>
+                            <div class="important__content">
+                                <img class="important__img" src="../image/main/important-2.svg" alt="">
+                                <h4 class="important__subtitle">Скорость</h4>
+                                <p class="important__text">Благодаря отлаженной системе в Womazing мы можем отшивать
+                                    до
+                                    20-ти единиц продукции в наших собственных цехах</p>
+                            </div>
+                            <div class="important__content">
+                                <img class="important__img" src="../image/main/important-3.svg" alt="">
+                                <h4 class="important__subtitle">Ответственность</h4>
+                                <p class="important__text">Мы заботимся о людях и планете. Безотходное производство
+                                    и
+                                    комфортные условия труда - все это Womazing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team">
+                <div class="container">
+                    <h2 class="team__title title">Команда мечты Womazing</h2>
+                    <div class="team__inner">
+                        <div class="team__top">
+                            <div class="team__slider">
+                                <div class="team__slide">
+                                    <img src="../image/main/team-3.png" alt="">
+                                </div>
+                                <div class="team__slide">
+                                    <img src="../image/main/team-1.png" alt="">
+                                </div>
+                                <div class="team__slide">
+                                    <img src="../image/main/team-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__arrows">
+                            <a href="#" class="team__arrow team__arrow-prev">
+                                <svg width="29" height="16" viewBox="0 0 29 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path id="Vector 1"
+                                        d="M29 8L0.999999 8M0.999999 8L8.18919 0.999999M0.999999 8L8.18919 15"
+                                        stroke="#858585" />
+                                </svg>
+                            </a>
+                            <a href="#" class="team__arrow team__arrow-next">
+                                <svg width="29" height="16" viewBox="0 0 29 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path id="Vector 2" d="M8.34742e-08 8L28 8M28 8L20.8108 15M28 8L20.8108 1"
+                                        stroke="black" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="team__dots">
+                        </div>
+
+                        <div class="team__row">
+                            <h2 class="team__subtitle">Для каждой</h2>
+                            <p class="team__text">
+                                Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.
+                                <br>
+                                <br>
+                                Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают
+                                достоинства каждой девушки.
+                            </p>
+                            <a class="team__link-brands" href="./pages/brand.html">Подробнее о бренде</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__menu">
+                <div class="container">
+                    <div class="menu__inner">
+                        <a href="main.html" class="menu__logo">
+                            <img class="menu__logo-img" src="../image/header/logo.png" alt="Лого">
+                            <span class="menu__logo-title">Womazing</span>
+                        </a>
+                        <nav class="menu__nav">
+                            <ul class="menu__list">
+                                <li class="menu__item footer__item">
+                                    <a href="main.html">Главная</a>
+                                </li>
+                                <li class="menu__item footer__item">
+                                    <a href="./pages/store.html">Магазин</a>
+                                </li>
+                                <li class="menu__item footer__item">
+                                    <a href="./pages/brand.html">О бренде</a>
+                                </li>
+                                <li class="menu__item footer__item">
+                                    <a href="./pages/contact.html">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <span class="menu__number footer__number">+7 (495) 823-54-12</span>
+                    </div>
+                    <div class="footer__inner">
+                        <div class="footer__policy">
+                            <a class="footer__policy-link" href="#">&#169 Все права защищены</a>
+                            <a class="footer__policy-link" href="#">Политика конфиденциальности</a>
+                            <a class="footer__policy-link" href="#">Публичная оферта</a>
+                        </div>
+                        <div class="footer__item-elements">
+                            <a class="footer__item-elements-link" href="#">Пальто</a>
+                            <a class="footer__item-elements-link" href="#">Свитшоты</a>
+                            <a class="footer__item-elements-link" href="#">Кардиганы</a>
+                            <a class="footer__item-elements-link" href="#">Толстовки</a>
+                        </div>
+                        <div class="footer__elements">
+                            <span class="footer__email">hello@womazing.com</span>
+                            <div class="footer__socials">
+                                <a href="#" class="footer__social">
+                                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="instagram (1) 1" clip-path="url(#clip0_4_278)">
+                                            <g id="Group">
+                                                <g id="Group_2">
+                                                    <path id="Vector"
+                                                        d="M15.6094 0.5H6.39066C2.86683 0.5 0 3.36683 0 6.89066V16.1093C0 19.6332 2.86683 22.5 6.39066 22.5H15.6093C19.1332 22.5 22 19.6332 22 16.1094V6.89066C22 3.36683 19.1332 0.5 15.6094 0.5ZM20.2812 16.1093C20.2812 18.6854 18.1854 20.7812 15.6094 20.7812H6.39066C3.81455 20.7812 1.71875 18.6854 1.71875 16.1094V6.89066C1.71875 4.31455 3.81455 2.21875 6.39066 2.21875H15.6093C18.1854 2.21875 20.2812 4.31455 20.2812 6.89066V16.1093Z"
+                                                        fill="black" />
+                                                </g>
+                                            </g>
+                                            <g id="Group_3">
+                                                <g id="Group_4">
+                                                    <path id="Vector_2"
+                                                        d="M11 5.57031C7.73034 5.57031 5.07031 8.23034 5.07031 11.5C5.07031 14.7697 7.73034 17.4297 11 17.4297C14.2697 17.4297 16.9297 14.7697 16.9297 11.5C16.9297 8.23034 14.2697 5.57031 11 5.57031ZM11 15.7109C8.6781 15.7109 6.78906 13.8219 6.78906 11.5C6.78906 9.1781 8.6781 7.28906 11 7.28906C13.3219 7.28906 15.2109 9.1781 15.2109 11.5C15.2109 13.8219 13.3219 15.7109 11 15.7109Z"
+                                                        fill="black" />
+                                                </g>
+                                            </g>
+                                            <g id="Group_5">
+                                                <g id="Group_6">
+                                                    <path id="Vector_3"
+                                                        d="M17.0156 6.34375C17.4902 6.34375 17.875 5.95899 17.875 5.48438C17.875 5.00976 17.4902 4.625 17.0156 4.625C16.541 4.625 16.1562 5.00976 16.1562 5.48438C16.1562 5.95899 16.541 6.34375 17.0156 6.34375Z"
+                                                        fill="black" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4_278">
+                                                <rect width="22" height="22" fill="white"
+                                                    transform="translate(0 0.5)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer__social">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_4_303)">
+                                            <path
+                                                d="M18.5391 0H2.46094C1.1039 0 0 1.1039 0 2.46094V18.5391C0 19.8961 1.1039 21 2.46094 21H18.5391C19.8961 21 21 19.8961 21 18.5391V2.46094C21 1.1039 19.8961 0 18.5391 0ZM19.3594 18.5391C19.3594 18.9914 18.9914 19.3594 18.5391 19.3594H13.6992V13.3711H16.3253L16.6314 10.8281H13.6992V8.08008C13.6992 7.37865 14.2283 6.84961 14.9297 6.84961H16.7754V4.4707C16.2896 4.40213 15.3525 4.30664 14.9297 4.30664C13.973 4.30664 13.0141 4.71023 12.2989 5.41374C11.5621 6.13857 11.1562 7.08801 11.1562 8.08729V10.8281H8.49023V13.3711H11.1562V19.3594H2.46094C2.00864 19.3594 1.64062 18.9914 1.64062 18.5391V2.46094C1.64062 2.00864 2.00864 1.64062 2.46094 1.64062H18.5391C18.9914 1.64062 19.3594 2.00864 19.3594 2.46094V18.5391Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_4_303">
+                                                <rect width="21" height="21" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer__social">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.2712 5.16525L20.2598 5.12109C21.2343 4.53688 22.0211 3.5738 22.3711 2.4707C21.4584 3.01367 20.3904 3.42561 19.3164 3.63867C18.4552 2.7211 17.3061 2.15625 15.9473 2.15625C13.3429 2.15625 11.1855 4.26475 11.1855 6.87305C11.1855 7.24419 11.238 7.60752 11.3203 7.95117V7.99609C7.43875 7.77436 3.92429 5.80031 1.61719 2.96484C1.21231 3.66248 0.988281 4.65939 0.988281 5.52539C0.988281 6.87305 1.78852 8.67805 3.05469 9.52344V9.61328C2.29865 9.58278 1.52429 9.06195 0.898438 8.71484C0.898438 8.73546 0.92584 8.76026 0.92584 8.78088C0.92584 11.0696 2.6034 13.0436 4.76172 13.4766C4.38559 13.5761 3.85582 13.6562 3.45898 13.6562C3.15361 13.6562 2.84877 13.5765 2.56055 13.5215C3.16102 15.3978 4.89648 16.6211 6.96289 16.6211V16.666C5.35446 17.913 3.31577 18.7773 1.12305 18.7773C0.742154 18.7773 0.269531 18.7324 0 18.6875C2.08622 20.0277 4.56631 20.8438 7.23242 20.8438C15.9102 20.8438 20.6641 13.7012 20.6641 7.45703V6.82812C21.5871 6.16144 22.3686 5.26098 23 4.3125C23 4.3125 21.3439 5.09724 20.2712 5.16525ZM18.8672 7.45703C18.8672 8.80523 18.6031 10.221 18.1035 11.5512C17.5785 12.9492 16.8227 14.2107 15.8574 15.3005C14.3434 17.0096 11.6181 19.0469 7.23242 19.0469C7.10354 19.0469 6.97488 19.0446 6.84623 19.0402C7.26966 18.7945 7.67661 18.5211 8.06384 18.2209L8.75977 17.6814V16.8008V16.6211V14.8242L8.0195 14.816C7.21005 14.807 6.55859 14.1483 6.55859 13.3388V11.8696L5.58689 11.6502C5.1569 11.5531 4.85156 11.1711 4.85156 10.7303V9.61328V9.47852L4.8291 8.5626L4.02999 8.02907C3.6849 7.73874 3.37215 7.32406 3.14934 6.87529C5.50724 8.59481 8.30758 9.62379 11.2178 9.79005L13.1172 9.89854V7.99609V7.95117V7.73892L13.0677 7.5325C13.0111 7.29626 12.9824 7.07439 12.9824 6.87305C12.9824 6.09931 13.2911 5.3687 13.8517 4.81576C14.4156 4.25949 15.1598 3.95312 15.9473 3.95312C16.7434 3.95312 17.4362 4.26106 18.0063 4.86841L18.4647 5.35684L18.5202 5.57112L18.5316 5.61528L18.8672 6.91262V7.45703Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="footer__pay">
+                                <img src="../image/footer/visa.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

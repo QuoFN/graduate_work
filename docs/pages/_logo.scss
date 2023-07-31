@@ -1,0 +1,15 @@
+.menu__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .menu__logo-title {
+        font-weight: 500;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+    }
+
+    .menu__logo-img {
+        margin-right: 5px;
+    }
+}

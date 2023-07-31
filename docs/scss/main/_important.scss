@@ -1,0 +1,35 @@
+.important {
+    padding-bottom: 130px;
+}
+.important__title {
+    margin-bottom: 92px;
+}
+
+.important__box-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.important__img {
+    width: 70px;
+    margin-bottom: 37px;
+}
+
+.important__subtitle {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.important__text {
+    text-align: left;
+    width: 305px;
+    height: 115px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.34px;
+}

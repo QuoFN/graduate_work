@@ -1,0 +1,12 @@
+$primaryColor: #000;
+$secondColor: #6E9C9F;
+$secondColor-hover: #509498;;
+$additionalColor: #F1EADC;
+
+//       Mixin       //
+
+@mixin flexcent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
