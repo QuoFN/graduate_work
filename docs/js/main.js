@@ -101,34 +101,59 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".store__button");
     const products = document.querySelectorAll(".store__product-content");
     const totalCount = document.querySelector(".total__count");
+    const noProductsText = document.querySelector(".store__noproducts");
 
     filterButtons.forEach(button => {
         button.addEventListener("click", function (event) {
-            filterButtons.forEach(btn => btn.classList.remove("store__button--active"));
-            event.target.classList.add("store__button--active");
-            filterProducts(event.target.dataset.category);
+            const category = event.target.dataset.category;
+
+            if (category === "all") {
+                event.target.classList.toggle("store__button--active");
+                filterButtons.forEach(btn => {
+                    if (btn !== event.target) {
+                        btn.classList.remove("store__button--active");
+                    }
+                });
+            } else {
+                event.target.classList.toggle("store__button--active");
+                const allButton = document.querySelector('[data-category="all"]');
+                if (allButton) {
+                    allButton.classList.remove("store__button--active");
+                }
+            }
+            
+            filterProducts();
         });
     });
 
-    function filterProducts(selectedCategory) {
+    function filterProducts() {
         let visibleCount = 0;
+        let hasProducts = false;
 
-        products.forEach((product, index) => {
+        products.forEach(product => {
             const productCategory = product.dataset.category;
-            const storeDisable = document.querySelector('.store__disable')
-            if (selectedCategory === "all" || selectedCategory === productCategory) {
-                product.style.opacity = "1";
-                product.dataset.hidden = "false";
+            const activeButtons = document.querySelectorAll(".store__button--active");
+            const activeCategories = Array.from(activeButtons).map(button => button.dataset.category);
+
+            if (activeCategories.includes("all") || activeCategories.includes(productCategory)) {
+                product.style.display = "block";
                 visibleCount++;
+                hasProducts = true;
             } else {
-                product.style.opacity = "0";
-                product.dataset.hidden = "true";
+                product.style.display = "none";
             }
         });
 
-        totalCount.textContent = `Показано: ${visibleCount} из 12 товаров `;
+        totalCount.textContent = `Total products: ${visibleCount}`;
+        noProductsText.style.display = hasProducts ? "none" : "block";
     }
 });
+
+
+
+
+
+
 
 
 
