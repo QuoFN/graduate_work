@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        totalCount.textContent = `Total products: ${visibleCount}`;
+        totalCount.textContent = `Показано: ${visibleCount} из 12 товаров`;
         noProductsText.style.display = hasProducts ? "none" : "block";
     }
 });
