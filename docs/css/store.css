@@ -816,7 +816,7 @@ body {
 }
 
 .switch-page__main {
-  margin-right: 30px;
+  margin-right: 35px;
 }
 
 .switch-page__store {
@@ -955,17 +955,6 @@ body {
   color: #998E78;
 }
 
-.store__disable {
-  padding-top: 50px;
-}
-.store__disable p {
-  position: absolute;
-  font-size: 2rem;
-  top: 40%;
-  right: 41.2%;
-  z-index: -1;
-}
-
 .store__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1001,4 +990,13 @@ body {
 .store__link button:nth-child(1) {
   background-color: #000;
   color: #ffffff;
+}
+
+.store__noproducts {
+  display: none;
+  position: absolute;
+  top: 32%;
+  right: 40%;
+  font-size: 38px;
+  font-weight: 500;
 }/*# sourceMappingURL=store.css.map */
