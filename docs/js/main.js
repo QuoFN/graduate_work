@@ -97,77 +97,103 @@ function menuFixed() {
 document.addEventListener('scroll', menuFixed)
 
 
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".store__button");
     const products = document.querySelectorAll(".store__product-content");
     const totalCount = document.querySelector(".total__count");
     const noProductsText = document.querySelector(".store__noproducts");
+    const paginationButtons = document.querySelectorAll('.store__link-button');
+    let currentPage = 1;
+
+    filterProducts("all", currentPage);
 
     filterButtons.forEach(button => {
         button.addEventListener("click", function (event) {
             filterButtons.forEach(btn => btn.classList.remove("store__button--active"));
             event.target.classList.add("store__button--active");
-            filterProducts(event.target.dataset.category);
+            
+            if (event.target.dataset.category === "all") {
+                currentPage = 1;
+                updatePagination(currentPage);
+            } else {
+                currentPage = 1;
+                filterProducts(event.target.dataset.category, currentPage);
+            }
         });
-        filterProducts(1);
     });
 
-    function filterProducts() {
+    function filterProducts(category, page) {
+        const itemsPerPage = (category === "all" && page === 1) ? 9 : 3;
         let visibleCount = 0;
         let hasProducts = false;
-
-        products.forEach(product => {
+    
+        const totalProducts = products.length;
+    
+        products.forEach((product, index) => {
             const productCategory = product.dataset.category;
             const activeButtons = document.querySelectorAll(".store__button--active");
             const activeCategories = Array.from(activeButtons).map(button => button.dataset.category);
-
+    
             if (activeCategories.includes("all") || activeCategories.includes(productCategory)) {
-                product.style.display = "block";
-                visibleCount++;
-                hasProducts = true;
+                if (page === 1) {
+                    if (index < (totalProducts - 3)) {
+                        product.style.display = "block";
+                        visibleCount++;
+                        hasProducts = true;
+                    } else {
+                        product.style.display = "none";
+                    }
+                } else if (page === 2) {
+                    if (index >= (totalProducts - 3)) {
+                        product.style.display = "block";
+                        visibleCount++;
+                        hasProducts = true;
+                    } else {
+                        product.style.display = "none";
+                    }
+                } else {
+                    product.style.display = "none";
+                }
             } else {
                 product.style.display = "none";
             }
         });
-
-        totalCount.textContent = `Показано: ${visibleCount} из 12 товаров`;
+    
+        totalCount.textContent = `Показано: ${visibleCount} из ${totalProducts} товаров`;
         noProductsText.style.display = hasProducts ? "none" : "block";
     }
 
-
-
-    const itemsPerPage = 9; // Количество товаров на одной странице
-    const paginationButtons = document.querySelectorAll('.store__link-button');
-
-    function displayProducts(startIndex, endIndex) {
-        products.forEach((product, index) => {
-            if (index >= startIndex && index < endIndex) {
-                product.style.display = 'block';
+    function updatePagination(currentPage) {
+        paginationButtons.forEach((button, index) => {
+            if (index + 1 === currentPage) {
+                button.classList.add('store__link-button--active');
             } else {
-                product.style.display = 'none';
+                button.classList.remove('store__link-button--active');
             }
         });
-    }
 
-    function updatePagination(currentPage) {
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        displayProducts(startIndex, endIndex);
+        filterProducts("all", currentPage);
     }
 
     paginationButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            const activeButton = document.querySelector('.store__link-button--active');
-            if (activeButton) {
-                activeButton.classList.remove('store__link-button--active');
-            }
-            button.classList.add('store__link-button--active');
-            updatePagination(index + 1);
+            currentPage = index + 1;
+            updatePagination(currentPage);
         });
     });
 
     paginationButtons[0].click();
 });
+
+
+
 
 
 
