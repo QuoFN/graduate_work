@@ -105,25 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     filterButtons.forEach(button => {
         button.addEventListener("click", function (event) {
-            const category = event.target.dataset.category;
-
-            if (category === "all") {
-                event.target.classList.toggle("store__button--active");
-                filterButtons.forEach(btn => {
-                    if (btn !== event.target) {
-                        btn.classList.remove("store__button--active");
-                    }
-                });
-            } else {
-                event.target.classList.toggle("store__button--active");
-                const allButton = document.querySelector('[data-category="all"]');
-                if (allButton) {
-                    allButton.classList.remove("store__button--active");
-                }
-            }
-            
-            filterProducts();
+            filterButtons.forEach(btn => btn.classList.remove("store__button--active"));
+            event.target.classList.add("store__button--active");
+            filterProducts(event.target.dataset.category);
         });
+        filterProducts(1);
     });
 
     function filterProducts() {
@@ -147,9 +133,41 @@ document.addEventListener("DOMContentLoaded", function () {
         totalCount.textContent = `Показано: ${visibleCount} из 12 товаров`;
         noProductsText.style.display = hasProducts ? "none" : "block";
     }
+
+
+
+    const itemsPerPage = 9; // Количество товаров на одной странице
+    const paginationButtons = document.querySelectorAll('.store__link-button');
+
+    function displayProducts(startIndex, endIndex) {
+        products.forEach((product, index) => {
+            if (index >= startIndex && index < endIndex) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+
+    function updatePagination(currentPage) {
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        displayProducts(startIndex, endIndex);
+    }
+
+    paginationButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const activeButton = document.querySelector('.store__link-button--active');
+            if (activeButton) {
+                activeButton.classList.remove('store__link-button--active');
+            }
+            button.classList.add('store__link-button--active');
+            updatePagination(index + 1);
+        });
+    });
+
+    paginationButtons[0].click();
 });
-
-
 
 
 

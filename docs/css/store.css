@@ -888,13 +888,18 @@ body {
   opacity: 0;
   display: none;
 }
-.store__product-content:nth-last-child(10) span::after {
+.store__product-content:nth-last-child(13) span::after {
   content: "$229";
   position: absolute;
   top: 0;
   left: 33%;
   text-decoration: line-through;
   color: #9C9C9C;
+}
+
+.store__product-content--dlc img {
+  width: 350px;
+  height: 478px;
 }
 
 .store__product-content {
@@ -956,6 +961,7 @@ body {
 }
 
 .store__link {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -966,7 +972,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.store__link button {
+.store__link .store__link-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -987,9 +993,17 @@ body {
   line-height: 140%;
   letter-spacing: 0.34px;
 }
-.store__link button:nth-child(1) {
+.store__link .store__link-button--active {
   background-color: #000;
   color: #ffffff;
+}
+.store__link .store__link-button::after {
+  content: "";
+  position: absolute;
+  right: 43%;
+  width: 21px;
+  height: 11px;
+  background-image: url("../image/main/arrow-rightr-store.svg");
 }
 
 .store__noproducts {

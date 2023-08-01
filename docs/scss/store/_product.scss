@@ -50,7 +50,7 @@
         display: none;
     }
 
-    &:nth-last-child(10) {
+    &:nth-last-child(13) {
         span {
             &::after {
                 content: '$229';
@@ -61,6 +61,13 @@
                 color: #9C9C9C;
             }
         }
+    }
+}
+
+.store__product-content--dlc {
+    img {
+        width: 350px;
+        height: 478px;
     }
 }
 
@@ -112,11 +119,12 @@
 }
 
 .store__link {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    button {
+    .store__link-button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -131,9 +139,18 @@
         line-height: 140%;
         letter-spacing: 0.34px;
 
-        &:nth-child(1) {
+        &--active {
             background-color: #000;
             color: #ffffff;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 43%;
+            width: 21px;
+            height: 11px;
+            background-image: url('../image/main/arrow-rightr-store.svg');
         }
     }
 }
