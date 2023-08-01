@@ -111,17 +111,6 @@
     color: #998E78;
 }
 
-.store__disable {
-    padding-top: 50px;
-
-    p {
-        position: absolute;
-        font-size: 2rem;
-        top: 40%;
-        right: 41.2%;
-        z-index: -1;
-    }
-}
 .store__link {
     display: flex;
     justify-content: center;
@@ -149,3 +138,12 @@
     }
 }
 
+
+.store__noproducts {
+    display: none;
+    position: absolute;
+    top: 32%;
+    right: 40%;
+    font-size: 38px;
+    font-weight: 500;
+}
