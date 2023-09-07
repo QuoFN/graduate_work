@@ -6,15 +6,6 @@
 @import "./base/reset";
 @import "./base/base";
 
-
-//             Main               //
-
-@import "./main/header";
-@import "./main/collection";
-@import "./main/important";
-@import "./main/team";
-
-
 //             Pages               //
 
 @import "../pages/logo";
@@ -22,3 +13,8 @@
 @import "../pages/button";
 @import "../pages/title";
 @import "../pages/footer";
+@import "../pages/switchpage";
+
+//             Commodity               //
+
+@import "../scss/commodity/commoditySS";

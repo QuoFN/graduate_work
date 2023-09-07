@@ -24,6 +24,7 @@
 .switch-page__store {
     position: relative;
     color: #909090;
+    margin-right: 35px;
 
     &::after {
         content: '—';
@@ -32,4 +33,21 @@
         left: -32%;
         color: #000;
     }
+    &--active {
+        color: #000;
+    }
 }
+
+.switch-page__store-second {
+    position: relative;
+    color: #909090;
+    margin-right: 35px;
+    &::after {
+        content: '—';
+        position: absolute;
+        top: 0;
+        left: -20%;
+        color: #000;
+    }
+}
+

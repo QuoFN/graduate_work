@@ -38,6 +38,11 @@ const modalWindow = document.querySelector('.modal__window')
 const modalWindowAfter = document.querySelector('.modal__window-after')
 const form = document.querySelector('.modal__form')
 const header = document.querySelector('.header')
+const contactForm = document.querySelector('.contact__form')
+const contactSubmit = document.querySelector('.contact__submit')
+const commodityColor = document.querySelectorAll('.commodity__color-item')
+const commoditySize = document.querySelectorAll('.commodity__size-item')
+
 
 const modalOpen = () => {
     modal.classList.add('modal--open')
@@ -69,6 +74,8 @@ document.addEventListener('keydown', event => {
 })
 
 
+
+
 function formSubmit(event) {
     event.preventDefault()
     modalWindow.classList.add('modal__window--open')
@@ -97,9 +104,26 @@ function menuFixed() {
 document.addEventListener('scroll', menuFixed)
 
 
+function contactSend(event) {
+    event.preventDefault()
+    contactSubmit.style.display = 'block'
+}
 
+document.addEventListener('submit', contactSend)
 
+commodityColor.forEach(element => {
+    element.addEventListener('click', () => {
+        commodityColor.forEach(e => e.classList.remove('commodity__color-item--active'));
+        element.classList.add('commodity__color-item--active');
+    });
+});
 
+commoditySize.forEach(element => {
+    element.addEventListener('click', () => {
+        commoditySize.forEach(e => e.classList.remove('commodity__size-item--active'));
+        element.classList.add('commodity__size-item--active');
+    });
+});
 
 
 
@@ -118,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function (event) {
             filterButtons.forEach(btn => btn.classList.remove("store__button--active"));
             event.target.classList.add("store__button--active");
-            
+
             if (event.target.dataset.category === "all") {
                 currentPage = 1;
                 updatePagination(currentPage);
@@ -133,14 +157,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemsPerPage = (category === "all" && page === 1) ? 9 : 3;
         let visibleCount = 0;
         let hasProducts = false;
-    
+
         const totalProducts = products.length;
-    
+
         products.forEach((product, index) => {
             const productCategory = product.dataset.category;
             const activeButtons = document.querySelectorAll(".store__button--active");
             const activeCategories = Array.from(activeButtons).map(button => button.dataset.category);
-    
+
             if (activeCategories.includes("all") || activeCategories.includes(productCategory)) {
                 if (page === 1) {
                     if (index < (totalProducts - 3)) {
@@ -165,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 product.style.display = "none";
             }
         });
-    
+
         totalCount.textContent = `Показано: ${visibleCount} из ${totalProducts} товаров`;
         noProductsText.style.display = hasProducts ? "none" : "block";
     }
@@ -196,6 +220,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const cartCountElement = document.getElementById('menu__basket-count');
+const maxCartItems = 5;
+
+let cartCount = 0;
+
+function updateCartCount() {
+    cartCountElement.textContent = cartCount;
+}
+const commodityButton = document.querySelector('.commodity__button');
+commodityButton.addEventListener('click', () => {
+    if (cartCount < maxCartItems) {
+        cartCount++;
+        updateCartCount();
+        cartCountElement.classList.remove('menu__basket-count--hidden');
+    } else {
+        cartCountElement.style.backgroundColor = 'red'
+        alert ('Превышено кол-во товаров в корзине')
+    }
+});
 
 
 

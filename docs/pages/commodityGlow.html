@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Womazing</title>
     <link rel="shortcut icon" href="../image/shop.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/commodityGlow.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js"
         integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -70,6 +67,7 @@
                         </button>
                         <a href="#" class="menu__basket">
                             <img src="../image/header/basket.png" alt="корзина товаров">
+                            <span id="menu__basket-count" class="menu__basket-count--hidden">0</span>
                         </a>
                         <div class="modal">
                             <div class="modal__window">
@@ -113,67 +111,93 @@
         <div class="switch-page">
             <div class="container">
                 <h1 class="switch-page__title title">
-                    Контакты
+                    Купальник Glow
                 </h1>
                 <div class="switch-page__elements">
                     <a href="../index.html" class="switch-page__main">Главная</a>
-                    <p class="switch-page__store">Контакты</p>
+                    <a href="../pages/store.html" class="switch-page__store switch-page__store--active">Купальники</a>
+                    <span class="switch-page__store-second">Купальник Glow</span>
                 </div>
             </div>
         </div>
 
-        <section class="contact">
+        <section class="commodity">
             <div class="container">
-                <div class="contact__map-box">
-                    <iframe class="contact__map"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2249.0424138667!2d37.530667161027026!3d55.68825035354697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf681e55555%3A0x12a3ff751a28699b!2z0KDQtdC80L7QvdGCINC60LLQsNGA0YLQuNGA!5e0!3m2!1sru!2sru!4v1694021630043!5m2!1sru!2sru"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="contact__info">
-                    <div class="contact__info-items">
-                        <div class="contact__info-item">
-                            <span>Телефон</span>
-                            <p>+7 (495) 823-54-12</p>
+                <div class="commodity__inner">
+                    <div class="commodity__image-glow"></div>
+                    <div class="commodity__content">
+                        <p class="commodity__sum">$311</p>
+                        <div class="commodity__size">
+                            <h4 class="commodity__size-title">Выберите размер</h4>
+                            <div class="commodity__size-wrapper">
+                                <div class="commodity__size-item">
+                                    <span>S</span>
+                                </div>
+                                <div class="commodity__size-item commodity__size-item--active">
+                                    <span>M</span>
+                                </div>
+                                <div class="commodity__size-item">
+                                    <span>L</span>
+                                </div>
+                                <div class="commodity__size-item">
+                                    <span>XL</span>
+                                </div>
+                                <div class="commodity__size-item">
+                                    <span>XXL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="commodity__color">
+                            <h4 class="commodity__color-title">Выберите цвет</h4>
+                            <div class="commodity__color-wrapper">
+                                <div class="commodity__color-item commodity__color-item--brown"></div>
+                                <div
+                                    class="commodity__color-item commodity__color-item--gray commodity__color-item--active">
+                                </div>
+                                <div class="commodity__color-item commodity__color-item--red"></div>
+                                <div class="commodity__color-item commodity__color-item--yellow"></div>
+                            </div>
+                        </div>
+                        <div class="commodity__button-box">
+                            <button class="commodity__button button">
+                                Добавить в корзину
+                            </button>
                         </div>
                     </div>
-                    <div class="contact__info-items">
-                        <div class="contact__info-item">
-                            <span>E-mail</span>
-                            <p>info@sitename.com</p>
-                        </div>
-                    </div>
-                    <div class="contact__info-items">
-                        <div class="contact__info-item">
-                            <span>Адрес</span>
-                            <p>г. Москва, 3-я улица Строителей, 25</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact__form">
-                    <h3 class="contact__form-title">
-                        Напишите нам
-                    </h3>
-                    <div class="contact__form-input-wrapper">
-                        <input class="contact__form-input" type="text" required placeholder="Имя" maxlength="12"
-                            minlength="5">
-                        <div class="contact__form-line"></div>
-                        <input class="contact__form-input" type="email" required placeholder="E-mail">
-                        <div class="contact__form-line"></div>
-                        <input class="contact__form-input" type="number" size="12" required placeholder="Телефон">
-                        <div class="contact__form-line"></div>
-                        <textarea class="contact__form-input" placeholder="Сообщение"></textarea>
-                        <div class="contact__form-line contact__form-line--textarea"></div>
-                    </div>
-                    <button type="submit" class="contact__form-button button">
-                        <span>Отправить</span>
-                    </button>
-                </form>
-                <div class="contact__submit">
-                    <p class="contact__submit-text">Сообщение успешно отправлено</p>
                 </div>
             </div>
         </section>
+
+        <article class="other">
+            <div class="container">
+                <h2 class="other__title">Связанные товары</h2>
+                <div class="other__product">
+                    <div class="other__product-content">
+                        <img class="other__product-image" src="../image/main/USA.png" alt="">
+                        <a href="../pages/commodityUSA.html" class="other__image-overlay">
+                            <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12H31M31 12L20.186 1M31 12L20.186 23" stroke="white" />
+                            </svg>
+                        </a>
+                        <p class="other__product-text">Футболка USA</p>
+                        <span class="other__product-sum">$129</span>
+                    </div>
+                    <div class="other__product-content">
+                        <img class="other__product-image" src="../image/main/sweetshot.png" alt="">
+                        <a href="../pages/commoditySS.html" class="other__image-overlay">
+                            <svg width="32" height="24" viewBox="0 0 32 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12H31M31 12L20.186 1M31 12L20.186 23" stroke="white" />
+                            </svg>
+                        </a>
+                        <p class="other__product-text">Свитшот Sweet Shot</p>
+                        <span class="other__product-sum">$129</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
         <footer class="footer">
             <div class="footer__menu">
                 <div class="container">
@@ -283,5 +307,3 @@
         </footer>
     </div>
 </body>
-
-</html>
