@@ -51,3 +51,16 @@
     }
 }
 
+.switch-page__store-ss {
+    position: relative;
+    color: #909090;
+    margin-right: 35px;
+    &::after {
+        content: '—';
+        position: absolute;
+        top: 0;
+        left: -15%;
+        color: #000;
+    }
+}
+

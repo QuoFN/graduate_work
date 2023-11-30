@@ -42,7 +42,11 @@ const contactForm = document.querySelector('.contact__form')
 const contactSubmit = document.querySelector('.contact__submit')
 const commodityColor = document.querySelectorAll('.commodity__color-item')
 const commoditySize = document.querySelectorAll('.commodity__size-item')
+const burger = document.querySelector('.burger');
 
+burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+})
 
 const modalOpen = () => {
     modal.classList.add('modal--open')
@@ -236,7 +240,7 @@ commodityButton.addEventListener('click', () => {
         cartCountElement.classList.remove('menu__basket-count--hidden');
     } else {
         cartCountElement.style.backgroundColor = 'red'
-        alert ('Превышено кол-во товаров в корзине')
+        alert('Превышено кол-во товаров в корзине')
     }
 });
 
